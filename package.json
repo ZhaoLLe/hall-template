@@ -3,8 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode test",
     "build": "vue-tsc && vite build",
+    "build-test": "vue-tsc && vite build --mode test",
+    "build-qa": "vue-tsc && vite build --mode qa",
+    "build-demos": "vue-tsc && vite build --mode demos",
+    "build-prod": "vue-tsc && vite build --mode prod",
     "preview": "vite preview",
     "eslint": "eslint --ext .js,.vue,.ts,.tsx,.jsx --ignore-path .eslintignore --fix src",
     "prettier": "prettier --write .",
