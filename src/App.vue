@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
-
-// const a = 111;
-// debugger;
+console.log('app');
 </script>
 
 <template>
