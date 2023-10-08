@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
 const service = axios.create();
 

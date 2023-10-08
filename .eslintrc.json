@@ -19,6 +19,7 @@
     // override/add rules settings here, such as:
     "no-debugger": ["error"],
     "no-unused-vars": ["error"],
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "vue/multi-word-component-names": "off"
   }
 }
