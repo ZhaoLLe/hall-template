@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 // console.log('VITE_NODE_ENV ', VITE_NODE_ENV);
-console.log(import.meta.env);
+// console.log(import.meta.env);
 </script>
 
 <template>
