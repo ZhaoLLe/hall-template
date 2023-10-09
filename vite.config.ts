@@ -35,7 +35,8 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: 'http://test-api.payment.hall.shebao.net/',
+          // target: 'http://test-api-global-payment.shebao.net/',
+          target: 'http://10.8.78.177:30002/',
           changeOrigin: true,
           // rewrite: (path) => path.replace(/^\/api/, ''),
         },

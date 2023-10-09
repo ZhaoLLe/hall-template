@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
+import Layout from '@/layouts/index.vue';
 // console.log('VITE_NODE_ENV ', VITE_NODE_ENV);
 // console.log(import.meta.env);
 </script>
 
 <template>
+  <Layout />
   <RouterView></RouterView>
   <div>
     <a href="https://vitejs.dev" target="_blank">

@@ -7,7 +7,7 @@ import service from '@/utils/axios';
 const cookies = useCookies();
 
 export const gettoken = (params: any) => {
-  return axios.post(`${api}/sso/getTtl`, qs.stringify(params));
+  return axios.post(`${api}/sso/getTtl`, params);
 };
 export const getUdesk = (params: any) => {
   return axios.get(`${api}/udesk/get_params`, {

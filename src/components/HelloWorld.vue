@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCountStore } from '@/store/count';
+import { useCountStore } from '@/store/module/count';
 
 defineProps<{ msg: string }>();
 
