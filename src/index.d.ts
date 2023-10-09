@@ -27,9 +27,14 @@ declare module 'axios' {
     ): Promise<T>;
   }
   interface IAxios<D> {
-    retCode: 0 | 1;
+    retCode: 22000 | 22001;
     message: string;
     data: D;
   }
-  interface AxiosResponse<T = any> extends IAxios<D> {}
+  export interface AxiosResponse<T = any> extends IAxios<D> {}
+
+  export interface AxiosRequestConfig<T = any> extends AxiosRequestConfig<T> {
+    showloading?: boolean;
+    show404?: boolean;
+  }
 }

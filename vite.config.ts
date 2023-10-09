@@ -32,5 +32,14 @@ export default defineConfig(({ mode }) => {
         resolvers: [ElementPlusResolver()],
       }),
     ],
+    server: {
+      proxy: {
+        '/api': {
+          target: 'http://test-api.payment.hall.shebao.net/',
+          changeOrigin: true,
+          // rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+      },
+    },
   };
 });

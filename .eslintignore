@@ -3,4 +3,6 @@ dist/
 dist-ssr/
 src/index.d.ts
 .cz-config.js
+components.d.ts
+auto-imports.d.ts
 index.html
