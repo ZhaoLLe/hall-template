@@ -1,27 +1,32 @@
 <template>
   <div class="tool_bar_left">
-    <img src="public/vite.svg" />
+    <img src="/vite.svg" />
     <div style="width: 12px"></div>
     <el-dropdown>
       <span>
-        Dropdown List
+        北京哈哈哈有限公司
         <el-icon class="el-icon--right">
-          <arrow-down />
+          <i-ep-arrow-down />
         </el-icon>
       </span>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item>Action 1</el-dropdown-item>
-          <el-dropdown-item>Action 2</el-dropdown-item>
-          <el-dropdown-item>Action 3</el-dropdown-item>
-          <el-dropdown-item disabled>Action 4</el-dropdown-item>
-          <el-dropdown-item divided>Action 5</el-dropdown-item>
+          <el-dropdown-item v-for="item in companyList" :key="item">
+            {{ item }}
+          </el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const companyList = ref([
+  '北京哈哈哈有限公司',
+  '北京哈哈哈哈有限公司',
+  '北京哈哈哈哈哈有限公司',
+  '北京哈哈哈哈哈哈有限公司',
+]);
+</script>
 <style lang="less" scoped>
 .tool_bar_left {
   display: flex;
