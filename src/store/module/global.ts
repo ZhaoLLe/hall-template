@@ -4,6 +4,7 @@ export const useGlobalStore = defineStore('global', {
   state: () => ({
     ttl: '',
     layout: 'classic',
+    language: '',
   }),
   actions: {
     setTtl(ttl: string) {
@@ -11,6 +12,9 @@ export const useGlobalStore = defineStore('global', {
     },
     setLayout(layout: string) {
       this.layout = layout;
+    },
+    setLanguage(language: string) {
+      this.language = language;
     },
   },
 });

@@ -7,3 +7,7 @@ declare module '*.vue' {
   const vueComponent: DefineComponent<{}, {}, any>;
   export default vueComponent;
 }
+interface Navigator {
+  userAgent: string;
+  browserLanguage: string;
+}

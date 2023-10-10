@@ -5,6 +5,7 @@ import router from './router';
 import { useAuth } from './utils/auth';
 import 'virtual:uno.css';
 import App from './App.vue';
+import i18n from './languages/index';
 
 // useAuth(router);
 
@@ -12,5 +13,6 @@ const app = createApp(App);
 
 app.use(router);
 app.use(store);
+app.use(i18n);
 
 app.mount('#app');
