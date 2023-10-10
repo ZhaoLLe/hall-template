@@ -18,7 +18,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "allowJs": true,
-    "esModuleInterop":true,
+    "esModuleInterop": true,
 
     /* Linting */
     "strict": true,
@@ -26,6 +26,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue","src"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
