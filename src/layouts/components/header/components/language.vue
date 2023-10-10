@@ -5,8 +5,12 @@
     </el-icon>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item v-for="item in languageList" :key="item.value" :command="item.value"
-          :disabled="language === item.value">
+        <el-dropdown-item
+          v-for="item in languageList"
+          :key="item.value"
+          :command="item.value"
+          :disabled="language === item.value"
+        >
           {{ item.label }}
         </el-dropdown-item>
       </el-dropdown-menu>
@@ -15,18 +19,18 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { useGlobalStore } from "@/store/module/global";
+import { computed } from 'vue';
+import { useGlobalStore } from '@/store/module/global';
 //@ts-ignore
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n';
 
 const i18n = useI18n();
 const globalStore = useGlobalStore();
 const language = computed(() => globalStore.language);
 
 const languageList = [
-  { label: "简体中文", value: "zh" },
-  { label: "English", value: "en" }
+  { label: '简体中文', value: 'zh' },
+  { label: 'English', value: 'en' },
 ];
 
 const changeLanguage = (lang: string) => {

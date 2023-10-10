@@ -20,7 +20,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 const companyList = ref([
   '北京哈哈哈有限公司',
   '北京哈哈哈哈有限公司',

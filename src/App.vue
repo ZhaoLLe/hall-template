@@ -2,11 +2,11 @@
 import Layout from '@/layouts/index.vue';
 import { getBrowserLang } from '@/utils';
 //@ts-ignore
-import { useI18n } from "vue-i18n";
+import { useI18n } from 'vue-i18n';
 import { useGlobalStore } from './store/module/global';
 import { computed, onMounted } from 'vue';
-import en from "element-plus/es/locale/lang/en";
-import zhCn from "element-plus/es/locale/lang/zh-cn";
+import en from 'element-plus/es/locale/lang/en';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
 
 const globalStore = useGlobalStore();
 const i18n = useI18n();
@@ -18,9 +18,9 @@ onMounted(() => {
 
 // element language
 const locale = computed(() => {
-  if (globalStore.language == "zh") return zhCn;
-  if (globalStore.language == "en") return en;
-  return getBrowserLang() == "zh" ? zhCn : en;
+  if (globalStore.language == 'zh') return zhCn;
+  if (globalStore.language == 'en') return en;
+  return getBrowserLang() == 'zh' ? zhCn : en;
 });
 </script>
 

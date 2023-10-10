@@ -6,5 +6,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import Language from './components/language.vue'
+import Language from './components/language.vue';
 </script>
