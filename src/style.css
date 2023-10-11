@@ -9,10 +9,10 @@ body,
 }
 /* 修改主题 */
 :root {
-  --el-header-bg-color:#fff;
-  --el-header-border-color:#ebeef5;
+  --el-header-bg-color: #fff;
+  --el-header-border-color: #ebeef5;
 }
 html.dark {
-  --el-header-bg-color:#000;
-  --el-header-border-color:#363637;
+  --el-header-bg-color: #000;
+  --el-header-border-color: #363637;
 }
