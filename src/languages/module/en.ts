@@ -27,4 +27,11 @@ export default {
     logout: 'Logout',
     helpCenter: 'Help Center',
   },
+  menu: {
+    home: 'Home',
+    personnelmanagement: 'Personnel management',
+    settlementmanagement: 'Settlement management',
+    batchsettlement: 'Settlement batch',
+    detailsettlement: 'Settlement detail',
+  },
 };

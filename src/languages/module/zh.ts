@@ -27,4 +27,11 @@ export default {
     logout: '退出登录',
     helpCenter: '帮助中心',
   },
+  menu: {
+    home: '首页',
+    personnelmanagement: '人员管理',
+    settlementmanagement: '结算单管理',
+    batchsettlement: '结算批次',
+    detailsettlement: '结算明细',
+  },
 };
