@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 // vite-env.d.ts
 /// <reference types="vite-plugin-pages/client" />
+/// <reference types="vite-svg-loader" />
 declare const VITE_NODE_ENV: string;
 declare module '*.vue' {
   import type { DefineComponent } from 'vue';

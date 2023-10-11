@@ -8,6 +8,8 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import UnoCSS from 'unocss/vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import svgLoader from 'vite-svg-loader';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -25,7 +27,11 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
+
+      // https://github.com/unocss/unocss
+
       UnoCSS(),
+      // https://github.com/hannoeru/vite-plugin-pages
       Pages({
         dirs: 'src/pages',
       }),
@@ -63,6 +69,11 @@ export default defineConfig(({ mode }) => {
       Icons({
         autoInstall: true,
       }),
+      // https://github.com/jpkleemans/vite-svg-loader
+      svgLoader(),
+
+      // https://github.com/aleclarson/vite-tsconfig-paths
+      tsconfigPaths(),
     ],
     server: {
       proxy: {

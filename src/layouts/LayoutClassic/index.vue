@@ -11,7 +11,7 @@
       </el-header>
       <el-container class="classic-content">
         <el-aside>
-          <Menu />
+          <Menu :menu-list="menuList" />
         </el-aside>
         <el-container class="classic-main">
           <router-view />
@@ -24,6 +24,8 @@
 import ToolBarLeft from '../components/header/toolBarLeft.vue';
 import ToolBarRight from '../components/header/toolBarRight.vue';
 import Menu from '../components/menu/index.vue';
+
+import { menuList } from '@/menu';
 </script>
 <style lang="less" scoped>
 .layout_classic {
@@ -78,23 +80,24 @@ import Menu from '../components/menu/index.vue';
     height: calc(100% - 55px);
 
     :deep(.el-aside) {
-      width: 200px;
-      height: 100%;
-      background-color: var(--el-menu-bg-color);
-      border-right: 1px solid var(--el-menu-border-color);
+      width: auto;
+      //   width: 200px;
+      //   height: 100%;
+      //   background-color: var(--el-menu-bg-color);
+      //   border-right: 1px solid var(--el-menu-border-color);
 
-      .aside-box {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        transition: width 0.3s ease;
+      //   .aside-box {
+      //     display: flex;
+      //     flex-direction: column;
+      //     height: 100%;
+      //     transition: width 0.3s ease;
 
-        .el-menu {
-          width: 100%;
-          overflow-x: hidden;
-          border-right: none;
-        }
-      }
+      //     .el-menu {
+      //       width: 100%;
+      //       overflow-x: hidden;
+      //       border-right: none;
+      //     }
+      //   }
     }
 
     .classic-main {
