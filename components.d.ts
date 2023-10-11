@@ -17,6 +17,7 @@ declare module 'vue' {
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
     ElPagination: typeof import('element-plus/es')['ElPagination']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
@@ -24,7 +25,9 @@ declare module 'vue' {
     IEpFullScreen: typeof import('~icons/ep/full-screen')['default']
     IEpInfoFilled: typeof import('~icons/ep/info-filled')['default']
     IEpLanguage: typeof import('~icons/ep/language')['default']
+    IEpMoon: typeof import('~icons/ep/moon')['default']
     IEpQuestionFilled: typeof import('~icons/ep/question-filled')['default']
+    IEpSunny: typeof import('~icons/ep/sunny')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

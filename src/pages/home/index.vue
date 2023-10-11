@@ -7,8 +7,4 @@
 import { inject } from 'vue';
 const _t = inject<any>('_t');
 </script>
-<style lang="less" scoped>
-p {
-  color: red;
-}
-</style>
+<style lang="less" scoped></style>
