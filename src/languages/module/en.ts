@@ -22,8 +22,9 @@ export default {
     weakMode: 'Weak mode',
     fullScreen: 'Full Screen',
     exitFullScreen: 'Exit Full Screen',
-    personalData: 'Personal Data',
+    personalSetting: 'Personal settings',
     changePassword: 'Change Password',
     logout: 'Logout',
+    helpCenter: 'Help Center',
   },
 };

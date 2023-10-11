@@ -18,10 +18,13 @@ declare module 'vue' {
     ElMain: typeof import('element-plus/es')['ElMain']
     ElPagination: typeof import('element-plus/es')['ElPagination']
     ElTable: typeof import('element-plus/es')['ElTable']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IEpArrowDown: typeof import('~icons/ep/arrow-down')['default']
+    IEpFullScreen: typeof import('~icons/ep/full-screen')['default']
     IEpInfoFilled: typeof import('~icons/ep/info-filled')['default']
     IEpLanguage: typeof import('~icons/ep/language')['default']
+    IEpQuestionFilled: typeof import('~icons/ep/question-filled')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -27,6 +27,7 @@
     "element-plus": "^2.3.14",
     "pinia": "^2.1.6",
     "qs": "^6.11.2",
+    "screenfull": "^6.0.2",
     "universal-cookie": "^6.1.1",
     "unplugin-icons": "^0.17.0",
     "vue": "^3.3.4",

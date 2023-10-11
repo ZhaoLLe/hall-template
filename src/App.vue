@@ -4,17 +4,16 @@ import { getBrowserLang } from '@/utils';
 //@ts-ignore
 import { useI18n } from 'vue-i18n';
 import { useGlobalStore } from './store/module/global';
-import { computed, onMounted } from 'vue';
+import { computed, provide } from 'vue';
 import en from 'element-plus/es/locale/lang/en';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
 
 const globalStore = useGlobalStore();
 const i18n = useI18n();
-onMounted(() => {
-  const language = globalStore.language ?? getBrowserLang();
-  i18n.locale.value = language;
-  globalStore.setLanguage(language);
-});
+
+const language = globalStore.language || getBrowserLang();
+i18n.locale.value = language;
+globalStore.setLanguage(language);
 
 // element language
 const locale = computed(() => {
@@ -22,6 +21,7 @@ const locale = computed(() => {
   if (globalStore.language == 'en') return en;
   return getBrowserLang() == 'zh' ? zhCn : en;
 });
+provide('_t', i18n.t);
 </script>
 
 <template>

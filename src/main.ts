@@ -6,6 +6,7 @@ import { useAuth } from './utils/auth';
 import 'virtual:uno.css';
 import App from './App.vue';
 import i18n from './languages/index';
+import './assets/iconFont/iconfont.css';
 
 // useAuth(router);
 

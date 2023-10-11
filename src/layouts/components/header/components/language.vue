@@ -1,8 +1,6 @@
 <template>
   <el-dropdown trigger="click" @command="changeLanguage">
-    <el-icon class="el-icon--right">
-      <IEpInfoFilled />
-    </el-icon>
+    <i class="iconfont icon-language"></i>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item
