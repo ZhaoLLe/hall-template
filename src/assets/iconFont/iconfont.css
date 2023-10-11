@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
+  font-family: 'iconfont'; /* Project id  */
   src: url('iconfont.ttf?t=1696988781138') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: 'iconfont' !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -12,14 +12,13 @@
 }
 
 .icon-fullscreen-shrink:before {
-  content: "\e676";
+  content: '\e676';
 }
 
 .icon-fullscreen-expand:before {
-  content: "\e675";
+  content: '\e675';
 }
 
 .icon-language:before {
-  content: "\e618";
+  content: '\e618';
 }
-
