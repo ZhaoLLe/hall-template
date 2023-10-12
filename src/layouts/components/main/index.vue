@@ -3,7 +3,11 @@
     <router-view v-slot="{ Component, route }">
       <transition appear name="fade-transform" mode="out-in">
         <keep-alive :include="keepAliveName">
-          <div v-if="isRouterShow" :key="route.fullPath + globalStore.language" class="el-main-content-ccc">
+          <div
+            v-if="isRouterShow"
+            :key="route.fullPath + globalStore.language"
+            class="el-main-content-ccc"
+          >
             <component :is="Component" />
           </div>
         </keep-alive>
@@ -38,11 +42,11 @@ provide('refresh', refreshCurrentPage);
 watch(
   () => globalStore.maximize,
   () => {
-    const app = document.getElementById("app") as HTMLElement;
-    if (globalStore.maximize) app.classList.add("main-maximize");
-    else app.classList.remove("main-maximize");
+    const app = document.getElementById('app') as HTMLElement;
+    if (globalStore.maximize) app.classList.add('main-maximize');
+    else app.classList.remove('main-maximize');
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>
 <style lang="less">

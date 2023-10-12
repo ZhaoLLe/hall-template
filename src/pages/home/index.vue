@@ -5,24 +5,32 @@
     </div>
     <div class="home_modules">
       <div class="home_modules_left">
-        <Card :title="_t('home.quickEntry')" style="height: 180px;">
+        <Card :title="_t('home.quickEntry')" style="height: 180px">
           <template #default="scoped">
             <div class="entry">
-              <div class="entry_item"
-                :style="{ marginRight: idx != 1 ? '12px' : scoped.isMaximize ? '12px' : '0', marginBottom: scoped.isMaximize ? '12px' : '0' }"
-                v-for="(i, idx) in entrys" :key="i.path" @click="$router.push(i.path)">
+              <div
+                v-for="(i, idx) in entrys"
+                :key="i.path"
+                class="entry_item"
+                :style="{
+                  marginRight:
+                    idx != 1 ? '12px' : scoped.isMaximize ? '12px' : '0',
+                  marginBottom: scoped.isMaximize ? '12px' : '0',
+                }"
+                @click="$router.push(i.path)"
+              >
                 {{ i.name }}
               </div>
             </div>
           </template>
         </Card>
         <div class="h-20px"></div>
-        <Card :title="_t('home.pendingPaym')" style="height: 600px;">
+        <Card :title="_t('home.pendingPaym')" style="height: 600px">
           <List />
         </Card>
       </div>
       <div class="home_modules_right">
-        <Card :title="_t('home.collectionAccount')" style="height: 100%;">
+        <Card :title="_t('home.collectionAccount')" style="height: 100%">
           <List />
         </Card>
       </div>
@@ -31,8 +39,8 @@
 </template>
 <script setup lang="ts">
 import { inject } from 'vue';
-import Card from './components/card.vue'
-import List from './components/list.vue'
+import Card from './components/card.vue';
+import List from './components/list.vue';
 const _t = inject<any>('_t');
 const entrys = [
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
@@ -45,7 +53,7 @@ const entrys = [
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
-]
+];
 </script>
 <style lang="less" scoped>
 .home {
