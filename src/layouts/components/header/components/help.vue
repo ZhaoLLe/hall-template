@@ -1,8 +1,6 @@
 <template>
   <el-tooltip :content="_t('header.helpCenter')" placement="bottom">
-    <el-icon>
-      <IEpQuestionFilled />
-    </el-icon>
+    <i class="iconfont icon-question-circle"></i>
   </el-tooltip>
 </template>
 <script setup lang="ts">

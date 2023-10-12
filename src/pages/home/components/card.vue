@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="home_card_content">
-      <slot :is-maximize="globalStore.maximize" />
+      <slot :is-maximize="globalStore.maximize" :close-max="closeMax" />
     </div>
   </div>
 </template>
@@ -18,6 +18,7 @@ import { useGlobalStore } from '@/store/module/global';
 const props = defineProps({
   title: {
     type: String,
+    default: '',
   },
 });
 const globalStore = useGlobalStore();
@@ -25,6 +26,10 @@ const isMax = ref(false);
 const hMax = () => {
   isMax.value = !isMax.value;
   globalStore.setMaximize(!globalStore.maximize);
+};
+const closeMax = () => {
+  isMax.value = false;
+  globalStore.setMaximize(false);
 };
 </script>
 <style lang="less" scoped>

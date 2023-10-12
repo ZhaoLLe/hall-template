@@ -17,7 +17,7 @@
                     idx != 1 ? '12px' : scoped.isMaximize ? '12px' : '0',
                   marginBottom: scoped.isMaximize ? '12px' : '0',
                 }"
-                @click="$router.push(i.path)"
+                @click="hEntry({ i, scoped })"
               >
                 {{ i.name }}
               </div>
@@ -42,6 +42,8 @@ import { inject } from 'vue';
 import Card from './components/card.vue';
 import List from './components/list.vue';
 import { getuserinfo } from '@/api';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 getuserinfo({});
 const _t = inject<any>('_t');
 const entrys = [
@@ -56,6 +58,10 @@ const entrys = [
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
 ];
+const hEntry = ({ i, scoped }: any) => {
+  router.push(i.path);
+  scoped.closeMax();
+};
 </script>
 <style lang="less" scoped>
 .home {
