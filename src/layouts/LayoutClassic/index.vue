@@ -14,7 +14,7 @@
           <Menu :menu-list="menuList" />
         </el-aside>
         <el-container class="classic-main">
-          <router-view />
+          <Main />
         </el-container>
       </el-container>
     </el-container>
@@ -24,6 +24,7 @@
 import ToolBarLeft from '../components/header/toolBarLeft.vue';
 import ToolBarRight from '../components/header/toolBarRight.vue';
 import Menu from '../components/menu/index.vue';
+import Main from '../components/main/index.vue';
 import menuList from '@/menu';
 </script>
 <style lang="less" scoped>
