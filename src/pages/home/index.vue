@@ -8,11 +8,17 @@
         <Card :title="_t('home.quickEntry')" style="height: 180px">
           <template #default="scoped">
             <div class="entry">
-              <div v-for="(i, idx) in entrys" :key="i.path" class="entry_item" :style="{
-                marginRight:
-                  idx != 1 ? '12px' : scoped.isMaximize ? '12px' : '0',
-                marginBottom: scoped.isMaximize ? '12px' : '0',
-              }" @click="$router.push(i.path)">
+              <div
+                v-for="(i, idx) in entrys"
+                :key="i.path"
+                class="entry_item"
+                :style="{
+                  marginRight:
+                    idx != 1 ? '12px' : scoped.isMaximize ? '12px' : '0',
+                  marginBottom: scoped.isMaximize ? '12px' : '0',
+                }"
+                @click="$router.push(i.path)"
+              >
                 {{ i.name }}
               </div>
             </div>
@@ -36,7 +42,7 @@ import { inject } from 'vue';
 import Card from './components/card.vue';
 import List from './components/list.vue';
 import { getuserinfo } from '@/api';
-getuserinfo({})
+getuserinfo({});
 const _t = inject<any>('_t');
 const entrys = [
   { path: '/settlement/detail', name: _t('menu.detailsettlement') },
