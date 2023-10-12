@@ -3,7 +3,11 @@
     <router-view v-slot="{ Component, route }">
       <transition appear name="fade-transform" mode="out-in">
         <keep-alive :include="keepAliveName">
-          <div class="el-main-content-ccc" v-if="isRouterShow" :key="route.fullPath + globalStore.language">
+          <div
+            v-if="isRouterShow"
+            :key="route.fullPath + globalStore.language"
+            class="el-main-content-ccc"
+          >
             <component :is="Component" />
           </div>
         </keep-alive>
@@ -12,16 +16,16 @@
   </el-main>
 </template>
 <script setup lang="ts">
-import { useGlobalStore } from "@/store/module/global";
-import { useKeepAliveStore } from "@/store/module/keepAlive";
-import { computed, provide, ref } from "vue";
+import { useGlobalStore } from '@/store/module/global';
+import { useKeepAliveStore } from '@/store/module/keepAlive';
+import { computed, provide, ref } from 'vue';
 const globalStore = useGlobalStore();
 const keepAliveStore = useKeepAliveStore();
 const keepAliveName = computed(() => keepAliveStore.keepAliveName);
 // 提供刷新当前页面的方法
 const isRouterShow = ref(true);
 const refreshCurrentPage = (val: boolean) => (isRouterShow.value = val);
-provide("refresh", refreshCurrentPage);
+provide('refresh', refreshCurrentPage);
 // 使用方式
 // const refreshCurrentPage: Function = inject("refresh") as Function;
 // const refresh = () => {
@@ -34,9 +38,8 @@ provide("refresh", refreshCurrentPage);
 //     });
 //   }, 0);
 // };
-
 </script>
-<style lang="less" >
+<style lang="less">
 .el-main {
   position: relative;
   width: 100%;
