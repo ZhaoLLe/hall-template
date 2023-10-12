@@ -3,11 +3,7 @@
     <router-view v-slot="{ Component, route }">
       <transition appear name="fade-transform" mode="out-in">
         <keep-alive :include="keepAliveName">
-          <div
-            v-if="isRouterShow"
-            :key="route.fullPath + globalStore.language"
-            class="el-main-content-ccc"
-          >
+          <div v-if="isRouterShow" :key="route.fullPath + globalStore.language" class="el-main-content-ccc">
             <component :is="Component" />
           </div>
         </keep-alive>
@@ -46,13 +42,12 @@ provide('refresh', refreshCurrentPage);
   height: 100%;
   box-sizing: border-box;
   padding: 20px 24px;
-  overflow-x: hidden;
   background-color: var(--el-bg-color-page);
 }
 
 .el-main-content-ccc {
-  overflow: hidden;
   width: 100%;
+  min-width: 1020px;
   height: 100%;
   background-color: var(--el-bg-color);
 }
