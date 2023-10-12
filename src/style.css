@@ -64,3 +64,20 @@ html.dark {
   opacity: 0;
   transform: translateX(10px);
 }
+
+/* 当前页面最大化 css */
+.main-maximize {
+  .el-aside {
+    display: none !important;
+  }
+}
+.is-maximize {
+  position: absolute !important;
+  width: calc(100% - 48px) !important;
+  height: calc(100% - 40px) !important;
+  min-width: 1020px !important;
+  top: 20px !important;
+  left: 24px !important;
+  z-index: 9999 !important;
+  box-sizing: border-box !important;
+}

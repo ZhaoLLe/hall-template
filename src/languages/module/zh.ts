@@ -1,6 +1,9 @@
 export default {
   home: {
     welcome: '欢迎使用',
+    quickEntry: '快捷入口',
+    pendingPaym: '待处理付款',
+    collectionAccount: '收款账户',
   },
   tabs: {
     refresh: '刷新',

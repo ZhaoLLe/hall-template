@@ -5,6 +5,7 @@ export const useGlobalStore = defineStore('global', {
     ttl: '',
     layout: 'classic',
     language: '',
+    maximize: false,
   }),
   actions: {
     setTtl(ttl: string) {
@@ -15,6 +16,9 @@ export const useGlobalStore = defineStore('global', {
     },
     setLanguage(language: string) {
       this.language = language;
+    },
+    setMaximize(maximize: boolean) {
+      this.maximize = maximize;
     },
   },
 });

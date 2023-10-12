@@ -1,6 +1,9 @@
 export default {
   home: {
     welcome: 'Welcome',
+    quickEntry: 'Quick Entry',
+    pendingPaym: 'Pending Payment',
+    collectionAccount: 'Collection account',
   },
   tabs: {
     refresh: 'Refresh',

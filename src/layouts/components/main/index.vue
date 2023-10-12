@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { useGlobalStore } from '@/store/module/global';
 import { useKeepAliveStore } from '@/store/module/keepAlive';
-import { computed, provide, ref } from 'vue';
+import { computed, provide, ref, watch } from 'vue';
 const globalStore = useGlobalStore();
 const keepAliveStore = useKeepAliveStore();
 const keepAliveName = computed(() => keepAliveStore.keepAliveName);
@@ -34,6 +34,16 @@ provide('refresh', refreshCurrentPage);
 //     });
 //   }, 0);
 // };
+// 监听当前页面是否最大化，动态添加 class
+watch(
+  () => globalStore.maximize,
+  () => {
+    const app = document.getElementById("app") as HTMLElement;
+    if (globalStore.maximize) app.classList.add("main-maximize");
+    else app.classList.remove("main-maximize");
+  },
+  { immediate: true }
+);
 </script>
 <style lang="less">
 .el-main {
@@ -49,6 +59,6 @@ provide('refresh', refreshCurrentPage);
   width: 100%;
   min-width: 1020px;
   height: 100%;
-  background-color: var(--el-bg-color);
+  // background-color: var(--el-bg-color);
 }
 </style>

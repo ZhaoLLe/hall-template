@@ -30,6 +30,7 @@ declare module 'vue' {
     IEpArrowDown: typeof import('~icons/ep/arrow-down')['default']
     IEpExpand: typeof import('~icons/ep/expand')['default']
     IEpFold: typeof import('~icons/ep/fold')['default']
+    IEpFullscreen: typeof import('~icons/ep/fullscreen')['default']
     IEpFullScreen: typeof import('~icons/ep/full-screen')['default']
     IEpInfoFilled: typeof import('~icons/ep/info-filled')['default']
     IEpLanguage: typeof import('~icons/ep/language')['default']
@@ -38,5 +39,8 @@ declare module 'vue' {
     IEpSunny: typeof import('~icons/ep/sunny')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+  }
+  export interface ComponentCustomProperties {
+    vInfiniteScroll: typeof import('element-plus/es')['ElInfiniteScroll']
   }
 }
