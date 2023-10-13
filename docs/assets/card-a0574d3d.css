@@ -1,1 +1,15 @@
-.home_card[data-v-4988ef3e]{padding:12px;box-sizing:border-box;background-color:var(--el-bg-color)}.home_card .home_card_header[data-v-4988ef3e]{display:flex;justify-content:space-between;align-items:center;height:32px}.home_card .home_card_content[data-v-4988ef3e]{padding-top:20px;height:calc(100% - 64px)}
+.home_card[data-v-4988ef3e] {
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: var(--el-bg-color);
+}
+.home_card .home_card_header[data-v-4988ef3e] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+}
+.home_card .home_card_content[data-v-4988ef3e] {
+  padding-top: 20px;
+  height: calc(100% - 64px);
+}
