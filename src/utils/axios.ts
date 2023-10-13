@@ -10,8 +10,6 @@ const cookies = useCookies();
 const visitorSign = useStorage('visitor-sign', '');
 const companyId = useStorage('company_id', '');
 
-const router = useRouter();
-
 const service = axios.create({
   timeout: 50000,
   headers: {
@@ -38,6 +36,7 @@ service.interceptors.response.use(
   },
   (error) => {
     if (error.response.status === 401) {
+      const router = useRouter();
       router.push({ path: '/login' });
     }
     return Promise.reject(error);
