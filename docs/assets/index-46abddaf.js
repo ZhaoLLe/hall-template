@@ -1,4 +1,4 @@
-import { _ as n } from './index-a373cf8a.js';
+import { _ as n } from './index-2762e69d.js';
 const c = {};
 function e(r, o) {
   return 'nocompany';
