@@ -1,18 +1,14 @@
 <template>
   <el-main>
-    <router-view v-slot="{ Component, route }">
-      <transition appear name="fade-transform" mode="out-in">
-        <keep-alive :include="keepAliveName">
-          <div
-            v-if="isRouterShow"
-            :key="route.fullPath + globalStore.language"
-            class="el-main-content-ccc"
-          >
-            <component :is="Component" />
-          </div>
-        </keep-alive>
-      </transition>
-    </router-view>
+    <div class="el-main-content-ccc">
+      <router-view v-slot="{ Component, route }">
+        <transition appear name="fade-transform" mode="out-in">
+          <keep-alive :include="keepAliveName">
+            <component :is="Component" v-if="isRouterShow" :key="route.fullPath + globalStore.language" />
+          </keep-alive>
+        </transition>
+      </router-view>
+    </div>
   </el-main>
 </template>
 <script setup lang="ts">

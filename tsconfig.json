@@ -24,7 +24,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Unplugin */
+    "types": ["unplugin-vue-define-options/macros-global" /* ... */]
   },
   "include": [
     "src/**/*.ts",

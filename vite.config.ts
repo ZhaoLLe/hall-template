@@ -10,6 +10,7 @@ import IconsResolver from 'unplugin-icons/resolver';
 import UnoCSS from 'unocss/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgLoader from 'vite-svg-loader';
+import DefineOptions from 'unplugin-vue-define-options/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -27,7 +28,8 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       vue(),
-
+      // https://github.com/vue-macros/vue-macros/tree/main/packages/define-options#readme
+      DefineOptions(),
       // https://github.com/unocss/unocss
 
       UnoCSS(),
