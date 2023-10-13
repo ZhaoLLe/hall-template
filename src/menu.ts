@@ -1,5 +1,4 @@
 import { Avatar, HomeFilled, List } from '@element-plus/icons-vue';
-import Dashboard from '@/assets/vue.svg?component';
 import i18n from './languages/index';
 import { computed } from 'vue';
 const { t } = i18n.global;

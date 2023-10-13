@@ -10,7 +10,7 @@ components.d.ts
 auto-imports.d.ts
 
 node_modules
-dist
+# dist
 dist-ssr
 *.local
 

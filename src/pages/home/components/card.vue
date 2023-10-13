@@ -15,6 +15,7 @@
 </template>
 <script setup lang="ts">
 import { useGlobalStore } from '@/store/module/global';
+import { ref } from 'vue';
 const props = defineProps({
   title: {
     type: String,
