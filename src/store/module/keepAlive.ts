@@ -4,7 +4,7 @@ import { KeepAliveState } from '../type';
 export const useKeepAliveStore = defineStore({
   id: 'geeker-keepAlive',
   state: (): KeepAliveState => ({
-    keepAliveName: ['personnelList'],
+    keepAliveName: ['PersonnelList'],
   }),
   actions: {
     // Add KeepAliveName

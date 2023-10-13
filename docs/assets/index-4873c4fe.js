@@ -1,4 +1,4 @@
-import { _ as e } from './index-2762e69d.js';
+import { _ as e } from './index-8bc00137.js';
 const r = {};
 function t(s, c) {
   return 'this is user detail';

@@ -3,13 +3,13 @@ import {
   r as y,
   c as E,
   a as r,
-  t as x,
+  t as h,
   b as e,
   w as o,
-  o as h,
+  o as x,
   E as A,
   _ as V,
-} from './index-2762e69d.js';
+} from './index-8bc00137.js';
 import {
   E as N,
   a as S,
@@ -19,8 +19,8 @@ import {
   e as G,
   f as I,
   g as L,
-} from './el-form-item-92f8c845.js';
-import './scroll-64ac1a00.js';
+} from './el-form-item-fdbece38.js';
+import './scroll-026b2cf5.js';
 const k = { class: 'personnel_list' },
   z = v({
     __name: 'index',
@@ -50,19 +50,19 @@ const k = { class: 'personnel_list' },
         t = y({ user: '', region: '', date: '' }),
         m = () => {};
       return (p, a) => {
-        const i = T,
+        const c = T,
           l = w,
           d = C,
-          c = G,
+          i = G,
           u = A,
           b = N,
           n = I,
           f = S,
           g = L;
         return (
-          h(),
+          x(),
           E('div', k, [
-            r(x(p.$t('menu.detailsettlement')) + ' ', 1),
+            r(h(p.$t('menu.batchsettlement')) + ' ', 1),
             e(
               b,
               { inline: !0, model: t, class: 'demo-form-inline' },
@@ -74,7 +74,7 @@ const k = { class: 'personnel_list' },
                     {
                       default: o(() => [
                         e(
-                          i,
+                          c,
                           {
                             modelValue: t.user,
                             'onUpdate:modelValue':
@@ -96,7 +96,7 @@ const k = { class: 'personnel_list' },
                     {
                       default: o(() => [
                         e(
-                          c,
+                          i,
                           {
                             modelValue: t.region,
                             'onUpdate:modelValue':
@@ -158,5 +158,5 @@ const k = { class: 'personnel_list' },
       };
     },
   });
-const Z = V(z, [['__scopeId', 'data-v-9db39025']]);
+const Z = V(z, [['__scopeId', 'data-v-7fc84696']]);
 export { Z as default };

@@ -3,18 +3,10 @@
     <h3>{{ $t('menu.personnelmanagement') }}</h3>
     <el-form :inline="true" :model="formInline" class="demo-form-inline">
       <el-form-item label="Approved by">
-        <el-input
-          v-model="formInline.user"
-          placeholder="Approved by"
-          clearable
-        />
+        <el-input v-model="formInline.user" placeholder="Approved by" clearable />
       </el-form-item>
       <el-form-item label="Activity zone">
-        <el-select
-          v-model="formInline.region"
-          placeholder="Activity zone"
-          clearable
-        >
+        <el-select v-model="formInline.region" placeholder="Activity zone" clearable>
           <el-option label="Zone one" value="shanghai" />
           <el-option label="Zone two" value="beijing" />
         </el-select>
@@ -28,13 +20,7 @@
       <el-table-column prop="name" label="Name" width="180" />
       <el-table-column prop="address" label="Address" />
     </el-table>
-    <el-pagination
-      class="float-right"
-      :page-size="20"
-      :pager-count="11"
-      layout="prev, pager, next"
-      :total="1000"
-    />
+    <el-pagination class="float-right" :page-size="20" :pager-count="11" layout="prev, pager, next" :total="1000" />
   </div>
 </template>
 <script lang="ts" setup>
@@ -86,6 +72,6 @@ const onSubmit = () => {
 </style>
 <route>
   {
-    name: "personnelList",
+    name: "PersonnelList",
   }
 </route>
