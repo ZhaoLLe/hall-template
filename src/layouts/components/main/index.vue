@@ -4,7 +4,11 @@
       <router-view v-slot="{ Component, route }">
         <transition appear name="fade-transform" mode="out-in">
           <keep-alive :include="keepAliveName">
-            <component :is="Component" v-if="isRouterShow" :key="route.fullPath + globalStore.language" />
+            <component
+              :is="Component"
+              v-if="isRouterShow"
+              :key="route.fullPath + globalStore.language"
+            />
           </keep-alive>
         </transition>
       </router-view>
