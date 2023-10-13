@@ -1,15 +1,12 @@
 import { createApp } from 'vue';
 import store from './store/index';
 import router from './router';
-import { useAuth } from './utils/auth';
 import 'virtual:uno.css';
 import App from './App.vue';
 import i18n from './languages/index';
 import './assets/iconFont/iconfont.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import './style.css';
-
-// useAuth(router);
 
 const app = createApp(App);
 
